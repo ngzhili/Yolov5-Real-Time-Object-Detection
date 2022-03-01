@@ -55,20 +55,45 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <title>YOLOV5 Real Time Inference</title>
+    <style>
+      .corner {
+        border-radius: 25px;
+        border: 5px solid #212aad;
+        padding: 0px;
+        width:60%;
+        height:auto;
+        text-align: center;
+      }
 
-  <body>
-    <h1>Live streaming</h1>
-    <div>
+      .video-container {
+        justify-content: center;
+        text-align: center;
+        height:100%;
+        /*border: 1px solid black;*/
+      }
       
-
-        <img src="{{ url_for('video') }}" width="80%" />
-
-
-        <!--<img src="{{ url_for('video') }}" width="50%"/>-->
-    </div>
-            
+    </style>
+  </head>
+  
+  <body >
+      <div class="container">
+        <div class="row" style="text-align: center; width:100%;">
+          <img src="../static/pytorch.png" style="width:40px; position:relative; left: -10px; display:inline-block;">
+            <h1 style="text-align: center; display:inline-block;">Template for YOLOV5 Object Detection Model Real-Time Inference Using Web Cam</h1>
+          </img>
+          <h2 style="text-align: center;">Built by Zhili</h2>
+        </div>
+      </div>
+  
+      <div class="video-container">
+          <img src="{{ url_for('video') }}" class="corner"></img>
+          <!--<img src="../static/pytorch.png" class="corner"></img>-->
+          <!--<img src="{{ url_for('video') }}" width="50%"/>-->
+      </div>
     </body>
-
-
 </html>

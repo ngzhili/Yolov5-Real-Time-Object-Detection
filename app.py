@@ -15,17 +15,18 @@ from flask import Flask, render_template, request, redirect, Response
 app = Flask(__name__)
 
 
-'''
+#'''
+# Load Pre-trained Model
 model = torch.hub.load(
         "ultralytics/yolov5", "yolov5s", pretrained=True, force_reload=True
-        ).autoshape()  # force_reload = recache latest code
-'''
+        )#.autoshape()  # force_reload = recache latest code
+#'''
 # Load Custom Model
-model = torch.hub.load("ultralytics/yolov5", "custom", path = "./best_damage.pt", force_reload=True)
+#model = torch.hub.load("ultralytics/yolov5", "custom", path = "./best_damage.pt", force_reload=True)
 
 # Set Model Settings
 model.eval()
-model.conf = 0.5  # confidence threshold (0-1)
+model.conf = 0.6  # confidence threshold (0-1)
 model.iou = 0.45  # NMS IoU threshold (0-1) 
 
 from io import BytesIO
