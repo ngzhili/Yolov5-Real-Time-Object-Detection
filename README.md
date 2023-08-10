@@ -1,4 +1,4 @@
-# Yolov5 Real Time Object Detection model 
+# Yolov5 Object Detection on Live Stream Video via Flask
 ![framework](https://img.shields.io/badge/framework-flask-red)
 ![libraries](https://img.shields.io/badge/libraries-opencv-green)
 ![models](https://img.shields.io/badge/models-yolov5-yellow)
